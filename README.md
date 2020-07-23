@@ -8,14 +8,14 @@
 ## WORK FLOW
 steps :
 - [X] Data extraction / collection 
-- [ ] Data manipulation 
-- [ ] Data summarization
-- [ ] Loading data and dataset
-- [ ] Data visualisation 
-- [ ] Writing algorithm 
-- [ ] Build models
-- [ ] Selecting best model
-- [ ] Test and make predictions
+- [X] Data manipulation 
+- [X] Data summarization
+- [X] Loading data and dataset
+- [X] Data visualisation 
+- [X] Writing algorithm 
+- [X] Build models
+- [X] Selecting best model
+- [X] Test and make predictions
 - [ ] Making extension
 - [ ] Loading our model into extension
 - [ ] Try and deploy it…
