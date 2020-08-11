@@ -22,7 +22,7 @@ steps :
 
 
 ### DATASET COLLECTION
-[dataset](https://www.kaggle.com/akashkr/phishing-website-dataset)
+[Dataset Used](https://www.kaggle.com/akashkr/phishing-website-dataset)
 
 ### References:
 - https://github.com/arvind-rs/phishing_detector
