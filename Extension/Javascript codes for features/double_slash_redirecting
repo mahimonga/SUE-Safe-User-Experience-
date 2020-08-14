@@ -1,3 +1,4 @@
+//got bug here will update it soon
 function double_slash_redirecting(){
   var url = window.location.href,
   double_slash = url.split('//')[1];
