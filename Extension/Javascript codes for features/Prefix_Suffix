@@ -1,0 +1,10 @@
+function Prefix_Suffix(){
+  var url = window.location.href,
+  dash = url.split('-')[1];
+  if (dash) {
+    console.log("Danger");
+    return -1;}
+  else {
+    console.log("Safe");
+    return 1;}
+}
