@@ -12,8 +12,8 @@ chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
         actions: [new chrome.declarativeContent.ShowPageAction()]
         }]);
     });
-});
-chrome.extension.onRequest.addListener(function(prediction){
+
+chrome.runtime.sendMessage(function(prediction){
     if (prediction == 1){
         alert("Warning: Phishing detected!!");
     }
