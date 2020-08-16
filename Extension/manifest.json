@@ -2,7 +2,7 @@
     "name": "Getting Started with extension",
     "version": "1.0",
     "description": "Build an Extension!",
-    "permissions": ["DeclarativeContent", "storage"],
+    "permissions": ["declarativeContent", "storage","activeTab"],
     "background": {
         "scripts": ["background.js"],
         "persistent": false
@@ -10,5 +10,5 @@
      "page_action": {
         "default_popup": "popup.html"
      },
-     "manifest version" : 2 
+     "manifest_version" : 2 
 }
