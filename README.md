@@ -27,7 +27,7 @@ steps :
 [Dataset](https://www.kaggle.com/akashkr/phishing-website-dataset)
 
 ### Google Drive Link
-[All data](https://drive.google.com/drive/folders/1SD2LyLzxf7nLRNsl6KSS_sY4IdWOa3f8?usp=sharing)
+[Data used for colab files](https://drive.google.com/drive/folders/1SD2LyLzxf7nLRNsl6KSS_sY4IdWOa3f8?usp=sharing)
 
 ### References:
 - https://github.com/arvind-rs/phishing_detector
