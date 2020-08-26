@@ -17,7 +17,7 @@ steps :
 - [X] Selecting best model
 - [X] Test and make predictions
 - [X] Creating web Application using flask
-- [] Deploying as API for making extension
+- [ ] Deploying as API for making extension
 - [ ] Making extension
 - [ ] Loading our model into extension
 - [ ] Try and deploy it…
