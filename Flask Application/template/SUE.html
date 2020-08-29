@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Safe User Experience</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }  
+  .jumbotron {
+    background-color: #823bad;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #8821bf;
+    font-size: 50px;
+  }
+  .logo {
+    color: #8821bf;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #8821bf;
+  }
+  .carousel-indicators li {
+    border-color: #8821bf;
+  }
+  .carousel-indicators li.active {
+    background-color: #8821bf;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #8821bf; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #57316e !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #8821bf !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #8821bf;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #57316e;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #8821bf !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #57316e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">SUE</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">PREDICTION</a></li>
+        <li><a href="#portfolio">VISUALIZATION</a></li>
+        <li><a href="#pricing">PHISHING</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+<video width="320" height="240" autoplay>
+  <source src="https://gitlab.com/syedareehaquasar/tswe-project/-/raw/master/Flask%20Application/Static/img/New_video.mp4" type="video/mp4">
+</video>
+  <h1>Safe User Experience</h1> 
+  <p>Detects Phishing URL</p> 
+  
+  <form action='/predict' method="post">
+  <div class="input-group">
+    <input type="text" name="URL" placeholder="url" required="required" class="form-control" size="50"/>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Predict</button>
+      </div>
+    </div>
+  </form>
+  <br>
+  {{pred}}
+</div>
+
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+    <h3> As the name itself indicates we aim to provide a Safe User Experience while surfing on internet.</h3>
+      <h2>What is Phishing ?</h2><br>
+      <h4>Phishing is the fraudulent attempt to obtain sensitive information or data, such as usernames, passwords and credit card details, by disguising oneself as a trustworthy entity in an electronic communication.</h4><br>
+      <p>The first phishing lawsuit was filed in 2004 against a Californian teenager who created the imitation of the website “America Online”. With this fake website, he was able to gain sensitive information from users and access the credit card details to withdraw money from their accounts. Other than email and website phishing, there’s also 'vishing' (voice phishing), 'smishing' (SMS Phishing) and several other phishing techniques cybercriminals are constantly coming up with. </p>
+      <br><a href="https://gitlab.com/syedareehaquasar/tswe-project"><button class="btn btn-default btn-lg">Gitlab Repository</button></a>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>What did we do ?</h2><br>
+      <h4><strong>MISSION:</strong> Our mission is to create a safe platform for checking whether a url is safe or not. We provide you a platform made using Flask where we are using a trained ML model to predict whether a URL is malicious or not.</h4><br>
+      <p><strong>HOW:</strong> We have used XGBoost model trained on 30 features of a URL which predicts with an accuracy of 0.976. We are also using various modules to extract those 30 features from a single URL.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>PREDICTION</h2>
+  <h4>How are predictions of our model</h4>
+  <br>
+  <div class="row slideanim">
+  	<div class="col-sm-4">
+      <span class="glyphicon glyphicon-off logo-small"></span>
+      <h4>ACCURACY</h4>
+      <p>really high accuracy(0.976) on test data</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-wrench logo-small"></span>
+      <h4 style="color:#303030;">GENERALISED</h4>
+      <p>Will not only check url for phishing but for other malicious traits as well.</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-certificate logo-small"></span>
+      <h4>SAFETY</h4>
+      <p>User can surf on internet without any worry</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>VISUALIZATION</h2><br>
+  <h4>Data Visuals</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+      <img src="https://cdn.comparitech.com/wp-content/uploads/2018/08/SSL-phishing-stats-q1-2020.jpg"  width="400" height="300">
+        <p><strong>
+Phishing statistics and facts for 2019–2020</strong></p>
+        <p>Increasing attacks</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://images.idgesg.net/images/article/2019/02/phishing-100787249-large.jpg" width="400" height="300">
+        <p><strong>Root of most cyber evils</strong></p>
+        <p>Phishing has become root of most cyber evils</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="https://assets.website-files.com/5849834cfc74517b7aee4df8/5a725aaa1eab6300015f870d_img4_new.png" width="400" height="300">
+        <p><strong>Email spam statistics</strong></p>
+        <p>15 most outrageous email spam statistics</p>
+      </div>
+    </div>
+  </div><br>
+  
+  <h2>What do </h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>“Hackers find more success with organizations where employees are under appreciated, over worked and under paid. Why would anyone in an organization like that care enough to think twice before clicking on a phishing email?”<br><span>James Scott, Sr. Fellow, Institute for Critical Infrastructure Technology</span></h4>
+      </div>
+      <div class="item">
+        <h4>“Every conceivable layer of the election process is completely riddled with vulnerabilities, so yes, hacking elections is easy!”<br><span>James Scott, Senior Fellow, Institute for Critical Infrastructure Technology</span></h4>
+      </div>
+      <div class="item">
+        <h4>“A Nation State or Cyber-Mercenary won’t hack e-voting machines one by one. This takes too long and will have minimal impact. Instead, they’ll take an easier approach like spear phishing the manufacturer with malware and poison the voting machine update pre-election and allow the manufacturer to update each individual machine with a self-deleting payload that will target the tabulation process.”<br><span> James Scott, Senior Fellow, Institute for Critical Infrastructure Technology</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Container (Pricing Section) -->
+<div id="pricing" class="container-fluid">
+  <div class="text-center">
+    <h2>STAGES OF PHISHING ATTACK</h2>
+    <h4>There are 3 stages of phishing attack</h4>
+  </div>
+  <div class="row slideanim">
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Penetrate (Bait)</h1>
+        </div>
+        <div class="panel-body">
+        The most effective attacks can come in the simplest of forms. By simply mimicking the normal day to day activities that occur in the victim's role within the business, the attacker hopes for an impulsive ill decision. A prime example of an impulsive decision made takes us back to 2013. The famous Nigerian Prince phishing email that fooled thousands and still does to this day. This style of email is notoriously common and yet so simple - it requires the victim to send money to the cyber criminal, and in return they will be “reimbursed” over time.
+        </div>
+        <div class="panel-footer">
+          <h3>🥫</h3>
+          <h4>sets up baits</h4>
+        </div>
+      </div>      
+    </div>     
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>Observe (Hook)</h1>
+        </div>
+        <div class="panel-body">
+          This is where the attacker will monitor the account and will keep an eye on the email traffic to learn about the organisation in depth. Whilst the attacker gets to know the organisation this helps the attack to be tailored to the organisation, making it as realistic as possible.
+          Learning the traffic allows the hacker to determine who has access to what information, such as HR and financial records. This knowledge is then leveraged for the final step of the attack. Sometimes, cyber criminals will even set up forwarding rules so they don’t have to monitor the account like a hawk.
+        </div>
+        <div class="panel-footer">
+          <h3>⤣</h3>
+          <h4>Traps you</h4>
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1>The Attack (Catch)</h1>
+        </div>
+        <div class="panel-body">
+        This is where the attacker gets creative. From all of the information they have on an organisation, they will use this to personalise a phishing email. But first, they have to decide what the goal of the phishing email is. There are numerous goal types of phishing emails. Some common ones are: identity theft, blackmail, stealing a database of customer credit card details or sometimes just for fun.
+The best thing you can do is be prepared. The cyber criminal now knows you fell victim to their attack, and nothing is stopping them from fooling you again, right?
+        </div>
+        <div class="panel-footer">
+          <h3>🎣</h3>
+          <h4>attacks you</h4>
+        </div>
+      </div>      
+    </div>    
+  </div>
+  <div class="text-center">
+    <h2>PREVENTION</h2>
+    <h4>HOW COULD WE PREVENT THIS ?</h4>
+  </div>
+  <div class="row slideanim">
+  <p> Where to start? It’s quite simple really, the first thing you need to do is understand the threat. You need to acknowledge that there are too many motives out there waiting for you. Begin with asking yourself with what motivates someone to attack your business? Is it the information you possess, could it be beneficial to competitors or is it just very valuable? As a business owner or an executive you are already a target due to your position, there is a specific term for targeting executives, instead of spear phishing, it is termed ‘whaling’. Once the threat has been understood you can move onto the next step.</p>
+      <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1> Employees </h1>
+        </div>
+        <div class="panel-body">
+        Educating your end users. This can be done with a security awareness training program, that has bite-size modules these will keep your employees more engaged as well as maintaining the information better. Another great way to educate your employee is to phish them again, run a simulated phishing campaign, it allows you to test your employees as well as gaining an insight into which employees fell for the phishing attack. You can run more than one phishing campaign to keep track if your employees are making progress in spotting a phishing email.
+        </div>
+      </div>      
+    </div>   
+  <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1> Secure </h1>
+        </div>
+        <div class="panel-body">
+          2FA/MFA is absolutely essential. The password is arguably the most popular and commonly used security measure available but it is also one of the most vulnerable security measures. Anyone who gets hold of your password can simply waltz into your account and take what they need. This is the reason for so many people and companies are adopting MFA. One of the many benefits of MFA is each factor compensates for the weakness of the other factors. It allows you to have an extra layer of security and will certainly protect your account from cyber criminals. 
+        </div>
+      </div>      
+    </div>       
+    <div class="col-sm-4 col-xs-12">
+      <div class="panel panel-default text-center">
+        <div class="panel-heading">
+          <h1> Technology <h1>
+        </div>
+        <div class="panel-body">
+        Make sure you keep your security software up to date, the updates contain important changes to improve performance as well as the security and stability of applications on your device. As well as updating, backups are a must. Data is the most important thing on your device, and backups help to protect and restore your data if something goes wrong. Email spam filters are also very effective at removing the general phishing attacks from your inbox. Implementing these three will build the ‘ security firewall ’ for your system.
+        </div>
+      </div>      
+    </div>    
+  </div>
+  <a href="https://www.phishing.org/what-is-phishing"><button class="btn btn-lg">Learn more</button></a>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+      <h3>Linkedin</h3>
+      <a href="https://www.linkedin.com/in/syeda-reeha-quasar-625a16118/">Syeda Reeha Quasar</a> <br>
+      <a>Mahi Monga</a><br>
+      <a>Kahkasha Parveen</a>
+      <br><br>
+      <h3> GitHub/GitLab </h3>
+      <a href = "https://github.com/syedareehaquasar"> Syeda Reeha Quasar </a><br>
+            <a>Mahi Monga</a><br>
+      <a>Kahkasha Parveen</a>
+      <br>
+      <br><a href="https://gitlab.com/syedareehaquasar/tswe-project"><button class="btn btn-default btn-lg">Gitlab Repository</button></a>
+</div>
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
