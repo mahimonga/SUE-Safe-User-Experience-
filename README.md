@@ -5,8 +5,10 @@
 
 ![Phishing](./images/readmeimg.jpg)
 
-## WORK FLOW
-steps :
+## Accuracy of models:
+![model accuracy](https://gitlab.com/syedareehaquasar/tswe-project/-/raw/master/images/model_performance_Rankwise.PNG)
+
+## To Do
 - [X] Data extraction / collection 
 - [X] Data manipulation 
 - [X] Data summarization
