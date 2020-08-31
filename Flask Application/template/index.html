@@ -187,6 +187,22 @@ h1 {
     -webkit-animation-duration: 1s;
     visibility: visible;
   }
+  * {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
   @keyframes slide {
     0% {
       opacity: 0;
@@ -254,6 +270,7 @@ h1 {
 
 <video width="60%" height="50%" autoplay loop>
   <source src="https://gitlab.com/syedareehaquasar/tswe-project/-/raw/master/Flask%20Application/Static/img/New_video.mp4" type="video/mp4">
+    <!-- <source src="https://github.com/syedareehaquasar/Phishing-website/blob/master/phishing.mp4" type="video/mp4"> -->
 </video>
 
 <br>
@@ -329,7 +346,7 @@ h1 {
   <div class="row text-center slideanim">
     <div class="col-sm-4">
       <div class="thumbnail">
-      <img src="https://cdn.comparitech.com/wp-content/uploads/2018/08/SSL-phishing-stats-q1-2020.jpg"  width="400" height="300">
+      <img src="https://info.phishlabs.com/hs-fs/hubfs/phishing-attacks-using-https-2019.png?width=678&name=phishing-attacks-using-https-2019.png"  width="400" height="300">
         <p><strong>
 Phishing statistics and facts for 2019–2020</strong></p>
         <p>Increasing attacks</p>
@@ -479,7 +496,19 @@ The best thing you can do is be prepared. The cyber criminal now knows you fell 
 
 <!-- Container (Contact Section) -->
 <div id="contact" class="container-fluid bg-grey">
-  <h1 style="align:"center>CONTACT</h1>
+  <!-- <h1>CONTRIBUTORS</h1>
+  <div class="row">
+    <div class="column">
+      <img src="https://github.com/syedareehaquasar/Portfolio/blob/master/reeh.jpeg?raw=true" alt="Syeda Reeha Quasar" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="" alt="Kahkasha Parveen" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="https://media-exp1.licdn.com/dms/image/C5103AQFKlp7rKd_qpw/profile-displayphoto-shrink_200_200/0?e=1603929600&v=beta&t=jgYQx294q2rg8WVLd3VjF1TeFpgBJIFBW8puF3R1LI4" alt="Mahi Monga" style="width:100%">
+    </div>
+  </div> -->
+  <h1>CONTACT</h1>
       <h3>Linkedin</h3>
       <a href="https://www.linkedin.com/in/syeda-reeha-quasar-625a16118/">Syeda Reeha Quasar</a> <br>
       <a>Mahi Monga</a><br>
