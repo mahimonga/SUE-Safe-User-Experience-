@@ -20,12 +20,11 @@
 - [X] Test and make predictions
 - [X] Creating web Application using flask
 - [X] extracted each feature using basic python and python advanced modules
-- [ ] 
-- [ ] 
-- [ ] Try and deploy it…
+- [X] Integrating the extracted features with ML model
+- [X] Integrating the extracted features and ML model with Flask
+- [X] Try and test website
 
-
-### DATASET COLLECTION
+### Dataset used in project
 [Dataset](https://www.kaggle.com/akashkr/phishing-website-dataset)
 
 ### Google Drive Link
