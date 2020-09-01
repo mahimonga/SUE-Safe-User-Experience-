@@ -8,7 +8,7 @@
 ## Accuracy of models:
 ![model accuracy](https://gitlab.com/syedareehaquasar/tswe-project/-/raw/master/images/model_performance_Rankwise.PNG)
 
-## To Do
+## Work-flow 
 - [X] Data extraction / collection 
 - [X] Data manipulation 
 - [X] Data summarization
@@ -19,9 +19,9 @@
 - [X] Selecting best model
 - [X] Test and make predictions
 - [X] Creating web Application using flask
-- [ ] Deploying as API for making extension
-- [ ] Making extension
-- [ ] Loading our model into extension
+- [X] extracted each feature using basic python and python advanced modules
+- [ ] 
+- [ ] 
 - [ ] Try and deploy it…
 
 
