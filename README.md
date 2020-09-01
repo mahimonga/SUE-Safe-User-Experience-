@@ -1,7 +1,7 @@
 # SUE (Safe user experience)
 *An website for detecting malicious websites like phishing sites*
 
-*Tech Stack - Python (ML Model), Python Advanced Modules, HTML and CSS*
+*Tech Stack - Python (ML Model), Python Advanced Modules,Flask, HTML, CSS and Bootstrap*
 
 ![Phishing](./images/readmeimg.jpg)
 
