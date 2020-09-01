@@ -32,7 +32,7 @@
 [Data used for colab files](https://drive.google.com/drive/folders/1SD2LyLzxf7nLRNsl6KSS_sY4IdWOa3f8?usp=sharing)
 
 ### References:
-- https://github.com/arvind-rs/phishing_detector
+- https://docs.python.org/3/library/internet.html
 - https://github.com/faizann24/phishytics-machine-learning-for-phishing
 - https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
 
