@@ -10,7 +10,7 @@ SUE uses machine learning to predict the legitimacy of any website, depending up
 Here we have trained multiple models to predict the legitimacy based on the features extracted from url, and loaded the most accurate model i.e XGBoost model as final model. The accuracy of different models are as follows:-
 ## Accuracy of models:
 ![model accuracy](https://gitlab.com/syedareehaquasar/tswe-project/-/raw/master/images/model_performance_Rankwise.PNG)
-## Features exyracted 
+## Features extracted 
 ![feature1 image](https://gitlab.com/syedareehaquasar/tswe-project/-/blob/master/images/f1.png)
 ![feature2 image](https://gitlab.com/syedareehaquasar/tswe-project/-/blob/master/images/f2.png)
 ### Website
