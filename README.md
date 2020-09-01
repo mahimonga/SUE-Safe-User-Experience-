@@ -34,5 +34,6 @@
 - https://docs.python.org/3/library/internet.html
 - http://eprints.hud.ac.uk/id/eprint/24330/6/\\MohammadPhishing14July2015.pdf
 - https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
-- 
+- https://flask.palletsprojects.com/en/1.1.x/
+- https://courses.cognitiveclass.ai/courses/course-v1:CognitiveClass+ML0101ENv3+2018/course/
 
