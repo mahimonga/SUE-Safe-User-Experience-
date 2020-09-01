@@ -1,30 +1,18 @@
 # SUE (Safe user experience)
-*An Extension for detecting malicious websites like phishing sites*
+*A web app to check if given url leads to phishing sites*
 
-*Tech Stack - Python (ML Model), Javascript, HTML and CSS*
-
-![Phishing](./images/readmeimg.jpg)
-
+*Tech Stack - Python (ML Model), Bootstrap, HTML and CSS*
+### Phishing
+Phishing is one of the luring techniques used by phishing artist in the intention of exploiting the personal details of unsuspected users. Phishing website is a mock website that looks similar in appearance but different in destination. The unsuspected users post their data thinking that these websites come from trusted financial institutions. Several antiphishing techniques emerge continuously but phishers come with new technique by breaking all the antiphishing mechanisms. Hence there is a need for efficient mechanism for the prediction of phishing website.
+### Safe User Experience
+SUE classify a given url in phishing and non-phishing category and therefore insure that the user does not visit any malicious site and prevent intrusion.
+SUE uses machine learning to predict the legitimacy of any website, depending upon the 30 features extracted from url.
+Here we have trained multiple models to predict the legitimacy based on the features extracted from url, and loaded the most accurate model i.e XGBoost model as final model. The accuracy of different models are as follows:-
 ## Accuracy of models:
 ![model accuracy](https://gitlab.com/syedareehaquasar/tswe-project/-/raw/master/images/model_performance_Rankwise.PNG)
-
-## To Do
-- [X] Data extraction / collection 
-- [X] Data manipulation 
-- [X] Data summarization
-- [X] Loading data and dataset
-- [X] Data visualisation 
-- [X] Writing algorithm 
-- [X] Build models
-- [X] Selecting best model
-- [X] Test and make predictions
-- [X] Creating web Application using flask
-- [ ] Deploying as API for making extension
-- [ ] Making extension
-- [ ] Loading our model into extension
-- [ ] Try and deploy it…
-
-
+### Website
+We have developed the website using Flask, providing simple and easy mode for interaction. Just enter the url, the click on predict button to see the prediction.
+User can also get some basic knowledge of phishing and its type from the website itself.
 ### DATASET COLLECTION
 [Dataset](https://www.kaggle.com/akashkr/phishing-website-dataset)
 
