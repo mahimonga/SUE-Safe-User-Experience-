@@ -13,14 +13,16 @@ Here we have trained multiple models to predict the legitimacy based on the feat
 ### Website
 We have developed the website using Flask, providing simple and easy mode for interaction. Just enter the url, the click on predict button to see the prediction.
 User can also get some basic knowledge of phishing and its type from the website itself.
-### DATASET COLLECTION
+### Dataset used in project
 [Dataset](https://www.kaggle.com/akashkr/phishing-website-dataset)
 
 ### Google Drive Link
 [Data used for colab files](https://drive.google.com/drive/folders/1SD2LyLzxf7nLRNsl6KSS_sY4IdWOa3f8?usp=sharing)
 
 ### References:
-- https://github.com/arvind-rs/phishing_detector
-- https://github.com/faizann24/phishytics-machine-learning-for-phishing
+- https://docs.python.org/3/library/internet.html
+- http://eprints.hud.ac.uk/id/eprint/24330/6/\\MohammadPhishing14July2015.pdf
 - https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
+- https://flask.palletsprojects.com/en/1.1.x/
+- https://courses.cognitiveclass.ai/courses/course-v1:CognitiveClass+ML0101ENv3+2018/course/
 
