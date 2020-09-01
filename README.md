@@ -11,8 +11,8 @@ Here we have trained multiple models to predict the legitimacy based on the feat
 ## Accuracy of models:
 ![model accuracy](https://gitlab.com/syedareehaquasar/tswe-project/-/raw/master/images/model_performance_Rankwise.PNG)
 ## Features extracted: 
-![feature1 image](https://gitlab.com/syedareehaquasar/tswe-project/-/blob/master/images/f1.png)
-![feature2 image](https://gitlab.com/syedareehaquasar/tswe-project/-/blob/master/images/f2.png)
+![feature1 image](https://gitlab.com/syedareehaquasar/tswe-project/-/raw/master/images/f1.png)
+![feature2 image](https://gitlab.com/syedareehaquasar/tswe-project/-/raw/master/images/f2.png)
 ### Website
 We have developed the website using Flask, providing simple and easy mode for interaction. Just enter the url, the click on predict button to see the prediction.
 User can also get some basic knowledge of phishing and its type from the website itself.
