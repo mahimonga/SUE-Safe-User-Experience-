@@ -33,6 +33,7 @@
 
 ### References:
 - https://docs.python.org/3/library/internet.html
-- https://github.com/faizann24/phishytics-machine-learning-for-phishing
+- http://eprints.hud.ac.uk/id/eprint/24330/6/\\MohammadPhishing14July2015.pdf
 - https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
+- 
 
